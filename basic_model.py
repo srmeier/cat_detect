@@ -2,7 +2,7 @@ import cv2 as cv
 import requests
 
 faceCascade = cv.CascadeClassifier('haarcascade_frontalcatface.xml')
-cap = cv.VideoCapture('http://192.168.137.225:8000/stream.mjpg')
+cap = cv.VideoCapture('http://raspberrypi.mshome.net:8000/stream.mjpg')
 
 while True:
     ret, frame = cap.read()
@@ -16,7 +16,7 @@ while True:
     cv.imshow('frame', frame)
     
     if cat_found:
-        requests.get('http://192.168.137.225:8000/see_cat')
+        requests.get('http://raspberrypi.mshome.net:8000/see_cat')
 
     if (cv.waitKey(1) & 0xFF) == ord('q'):
         cap.release()
