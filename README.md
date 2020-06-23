@@ -12,6 +12,6 @@
 
 #### Common Commands
 
-- `http://192.168.137.159:8000/index.html`
-- `ffmpeg -i http://192.168.137.159:8000/stream.mjpg -an -vcodec flv stream.flv`
+- `http://raspberrypi.mshome.net:8000/index.html`
+- `ffmpeg -i http://raspberrypi.mshome.net:8000/stream.mjpg -an -vcodec flv stream.flv`
 - `ffmpeg -i stream.flv frames/stream_%d.jpg`
