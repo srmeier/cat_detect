@@ -21,6 +21,7 @@ PAGE="""\
 """
 
 running_leds = False
+run_water    = LED(2)
 
 def rand_leds():
     global running_leds
@@ -33,6 +34,8 @@ def rand_leds():
     yellow_led = LED(22)
     leds = [red_led, green_led, blue_led, yellow_led]
     prev_led = None
+
+    run_water.on()
     for i in range(10):
         led = random.choice(leds)
         while (prev_led is not None) and (led == prev_led):
@@ -41,6 +44,7 @@ def rand_leds():
         time.sleep(1)
         led.off()
         prev_led = led
+    run_water.off()
 
     running_leds = False
 
